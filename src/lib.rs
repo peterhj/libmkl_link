@@ -1,12 +1,14 @@
+pub use link_impl::*;
+
 #[cfg(all(not(feature = "openmp"), not(feature = "tbb")))]
-pub mod sequential {
-  #[link(name = "mkl_intel_lp64", kind = "static")]
+pub mod link_impl {
+  #[link(name = "mkl_intel_lp64")]
   extern "C" {}
 
-  #[link(name = "mkl_sequential", kind = "static")]
+  #[link(name = "mkl_sequential")]
   extern "C" {}
 
-  #[link(name = "mkl_core", kind = "static")]
+  #[link(name = "mkl_core")]
   extern "C" {}
 
   #[link(name = "pthread")]
@@ -20,14 +22,14 @@ pub mod sequential {
 }
 
 #[cfg(feature = "openmp")]
-pub mod parallel_openmp {
-  #[link(name = "mkl_intel_lp64", kind = "static")]
+pub mod link_impl {
+  #[link(name = "mkl_intel_lp64")]
   extern "C" {}
 
-  #[link(name = "mkl_intel_thread", kind = "static")]
+  #[link(name = "mkl_intel_thread")]
   extern "C" {}
 
-  #[link(name = "mkl_core", kind = "static")]
+  #[link(name = "mkl_core")]
   extern "C" {}
 
   #[link(name = "iomp5")]
@@ -44,14 +46,14 @@ pub mod parallel_openmp {
 }
 
 #[cfg(feature = "tbb")]
-pub mod parallel_tbb {
-  #[link(name = "mkl_intel_lp64", kind = "static")]
+pub mod link_impl {
+  #[link(name = "mkl_intel_lp64")]
   extern "C" {}
 
-  #[link(name = "mkl_tbb_thread", kind = "static")]
+  #[link(name = "mkl_tbb_thread")]
   extern "C" {}
 
-  #[link(name = "mkl_core", kind = "static")]
+  #[link(name = "mkl_core")]
   extern "C" {}
 
   #[link(name = "tbb")]
