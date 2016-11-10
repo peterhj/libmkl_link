@@ -1,5 +1,3 @@
-extern crate cblas_ffi;
-
 #[cfg(all(not(feature = "openmp"), not(feature = "tbb")))]
 pub mod sequential {
   #[link(name = "mkl_intel_lp64", kind = "static")]

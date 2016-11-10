@@ -1,7 +1,10 @@
-# libmkl_ffi
+# libmkl_link
 
 This library statically links various versions of Intel MKL, depending on the
-enabled features. There are three possible sets of linker args you can invoke:
+enabled features. To actually call the MKL BLAS functions, use a CBLAS FFI
+crate, such as [cblas_ffi](https://github.com/peterhj/libcblas_ffi).
+
+There are three possible sets of linker args you can invoke:
 
 * sequential MKL (default)
 * parallel OpenMP-backed MKL (feature "openmp")
