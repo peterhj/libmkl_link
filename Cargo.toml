@@ -6,6 +6,7 @@ license = "BSD-2-Clause"
 description = "CBLAS FFI bindings."
 repository = "https://github.com/peterhj/libmkl_ffi"
 keywords = ["blas", "intel", "mkl"]
+readme = "README.md"
 build = "build.rs"
 
 [features]
