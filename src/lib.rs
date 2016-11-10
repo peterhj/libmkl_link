@@ -32,9 +32,6 @@ pub mod parallel_openmp {
   #[link(name = "iomp5")]
   extern "C" {}
 
-  #[link(name = "stdc++")]
-  extern "C" {}
-
   #[link(name = "m")]
   extern "C" {}
 
