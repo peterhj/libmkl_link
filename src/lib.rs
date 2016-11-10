@@ -9,6 +9,9 @@ pub mod sequential {
   #[link(name = "mkl_core", kind = "static")]
   extern "C" {}
 
+  #[link(name = "pthread")]
+  extern "C" {}
+
   #[link(name = "m")]
   extern "C" {}
 
@@ -28,6 +31,9 @@ pub mod parallel_openmp {
   extern "C" {}
 
   #[link(name = "iomp5")]
+  extern "C" {}
+
+  #[link(name = "pthread")]
   extern "C" {}
 
   #[link(name = "m")]
@@ -52,6 +58,9 @@ pub mod parallel_tbb {
   extern "C" {}
 
   #[link(name = "stdc++")]
+  extern "C" {}
+
+  #[link(name = "pthread")]
   extern "C" {}
 
   #[link(name = "m")]
