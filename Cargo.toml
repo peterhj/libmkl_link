@@ -1,0 +1,22 @@
+[package]
+name = "mkl_ffi"
+version = "0.1.0"
+authors = ["Peter Jin <peterhaijin@gmail.com>"]
+license = "BSD-2-Clause"
+description = "CBLAS FFI bindings."
+repository = "https://github.com/peterhj/libmkl_ffi"
+keywords = ["blas", "intel", "mkl"]
+build = "build.rs"
+
+[features]
+default = []
+openmp = []
+tbb = []
+
+[lib]
+name = "mkl_ffi"
+path = "src/lib.rs"
+
+[dependencies]
+libc = "^0.2"
+cblas_ffi = "^0.1"
