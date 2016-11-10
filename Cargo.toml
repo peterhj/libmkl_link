@@ -17,6 +17,3 @@ tbb = []
 [lib]
 name = "mkl_link"
 path = "src/lib.rs"
-
-[dependencies]
-libc = "^0.2"
